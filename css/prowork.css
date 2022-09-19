@@ -1,0 +1,472 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;600;700;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit';
+    scroll-behavior: smooth;
+}
+.page{
+    width: 100%;
+    min-height: 100vh;
+    background-color:white;
+    display:flex ;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+html{
+    scrollbar-width: none;
+}
+.container{
+    position: relative;
+    width: 900px;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+}
+header{
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .icon{
+    background-color: black;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+}
+header .icon> span{
+    height: 4px;
+    border-radius: 3px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+}
+i{
+    font-size: 38px;
+}
+header h1{
+    font-size: 32px;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    letter-spacing: 1px;
+    transform:translate(0,0);
+    
+}
+.head  h1{
+    animation: moving 2s linear infinite alternate;
+}
+ @keyframes moving {
+    from{
+        transform: translate(0,0);
+    }to{
+        transform: translate(10px,0px);
+    }
+}
+.spanone{
+    top: 5px;
+    width: 80%;
+    right: 3px;
+}
+.spantwo{
+    top: 13px;
+    right: 3px;
+    width: 50%;
+}
+.spanthree{
+    top: 21px;
+    right: 3px;
+    width: 80%;
+}
+.content{
+    margin:120px 20px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.content .one{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 5px;
+}
+.content .two{
+    width: 60%;
+    height: 100%;
+    
+}
+.content .two img{
+    max-width: 100%;
+    height: 100%;
+}
+.button{
+    width: 100%;
+}
+.button button{
+    width: 125px;
+    height: 35px;
+    text-transform: capitalize;
+    border: none;
+    font-weight: 600;
+    font-size: 20px;
+    box-shadow: 2px 2px 0 1px black;
+    margin: 5px;
+    background-color: rgb(255, 255, 255);
+    color: #000;
+    transition: .2s;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button button:hover{
+    box-shadow: -2px -2px 0 1px black;
+}
+.head{
+    border-left: 4px solid black;
+    padding-left: 15px;
+
+}
+.head p{
+    margin: 10px 0;
+    font-size: 15px;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+}
+h3{
+    margin: 7px 0;
+    text-transform: capitalize;
+    font-size: 18px;
+    font-family: 400;
+}
+.side{
+    width: 350px;
+    height: 100%;
+    background-color: #000;
+    position: absolute;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0;
+    flex-direction: column;
+    transform: translateX(-350px);
+    transition: .5s ease-in-out;
+}
+.side .one,.two,.three{
+    width: 90%;
+    height: 280px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 8px;
+    text-align: center;
+    overflow: hidden;
+}
+.side >span ,.one>span,.two>span,.three > span{
+    width: 50px;
+    height: 50px;
+    background-color:gainsboro;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: 600;
+    border-radius: 50%;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.side > h2 ,.one > h2,.two >h2 ,.three >h2{
+    text-transform: capitalize;
+}
+.side>div:hover span{
+    box-shadow: 0 0 0 10000px gainsboro;
+}
+::selection{
+    background-color: gainsboro;
+    color: black;
+}
+.icontoglle{
+    left: 3px;
+}
+.show{
+    transform: translateX(0px);
+}
+.otherside{
+    position: fixed;
+    right: -70px;
+    bottom: 40px;
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+.otherside span:first-child{
+    display: flex;
+    background-color: gainsboro;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    width: 92%;
+    height:92%;
+}
+
+.otherside .arrow{
+    width: 15px;
+    height: 3px;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    display: block;
+}
+.otherside:hover{
+    bottom: 44px;
+}
+.page2{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.container2{
+    width: 900px;
+    height: 100%;
+    overflow: hidden;
+    background-color: white;
+}
+
+.headertwo{
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.headertwo h1{
+    width: 50%;
+    border-left: 4px solid black;
+    padding-left: 5px;
+}
+.headertwo .para{
+    width: 50%;
+    border-right: 4px solid black;
+    padding-right: 5px;
+    text-align: center;
+    font-size: 17px;
+}
+.items{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.item{
+    width: 95%;
+    height: 360px;
+    margin: 39px 0;
+    display: flex;
+    margin-bottom: 10px;
+
+}
+.item .images{
+    position: relative;
+    width:40% ; 
+    border-radius: 5px;
+    margin-top: 5px;
+}
+.item .text{
+    width:60% ; 
+    margin:0px 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+ }
+ .item .images img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+ }
+.text .description{
+    text-align: center;
+}
+.text .description h1{
+    margin: 20px;
+}
+.text .description p{
+    margin: 20px;
+    font-size: 20px;
+}
+.smallimgs img{
+    width: 95px;
+    height: 100px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.page3{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.container3{
+    width: 900px;
+    height: 100%;
+}
+.client{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.client h1{
+    border-left: 4px solid black;
+    padding-left: 10px;
+}
+.clientpara{
+    text-align: center;
+    margin: 30px 15px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.undispear{
+    display: flex;
+}
+.ourclient{
+    width: 70%;
+    background-color: gainsboro;
+    height: 55px;
+    margin: 80px;
+    display: flex;
+}
+.ourclient > div{
+    border-right: 1px solid black;
+    width: 25%;
+    height: 100%;
+    background-color: gainsboro;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+.ourclient >div img{
+    width: 100%;
+    height: 100%;
+    color: #000;
+}
+.page4{
+    width: 100%;
+    height: auto;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    margin-top: 30px;
+
+}
+.foter {
+    width: 900px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    color: white;
+    flex-wrap: wrap;
+}
+.foter >div{
+    margin: 10px;
+}
+.foter p{
+    text-align: start;
+    width: 100%;
+}
+.licence{
+    width: 100%;
+    height: 30px;
+    padding: 10px;
+    text-align: center;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.inputemail{
+    width: 400px;
+    height: 50px;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0;
+}
+input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-weight: 400;
+    font-size: 20px
+}
+button{
+    background-color: white;
+    color: #000;
+    border: none;
+    outline: none;
+    margin: 0;
+    width: auto;
+    height: 100%;
+    width: 80px;
+    background-color: gainsboro;
+    transition: 0.4s;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgb(182, 179, 179);
+}
+.none{
+    display: none;
+}
+.foter >div:last-child{
+    width: 100%;
+}
+.foter >div:last-child i{
+    margin: 5px 3px;
+}
+a{
+    color:white;
+    transition: 0.4s;
+}
+a i{
+    font-size: 32px;
+}
+a:hover{color:rgb(182, 179, 179);}
